@@ -11,6 +11,8 @@ CTestTestfile.cmake
 
 # Directories.
 cmake/*
+cmake-build-debug/*
 bin/*
 build/*
 .vscode/*
+.idea/*
