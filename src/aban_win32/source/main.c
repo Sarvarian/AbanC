@@ -1,3 +1,4 @@
+#define AbanNoSDLWindow
 #include "os/main.h"
 #include "os/window.h"
 
