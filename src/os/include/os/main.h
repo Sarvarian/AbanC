@@ -3,10 +3,19 @@
 #include <Windows.h>
 #include "global.h"
 
-int __aban_os_init_winmain(HINSTANCE hInstance, PWSTR pCmdLine, int nCmdShow);
-int __aban_os_init_main(int argc, char *argv[]);
-int __aban_os_failed_init(int error_code);
-int __aban_os_exit();
+#ifdef __cplusplus
+extern "C"
+{
+#endif // __cplusplus
+
+ int __aban_os_init_winmain(HINSTANCE hInstance, PWSTR pCmdLine, int nCmdShow);
+ int __aban_os_init_main(int argc, char *argv[]);
+ int __aban_os_failed_init(int error_code);
+ int __aban_os_exit();
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #define __MainBody(proc, init, ...)       \
  const int init_res = init(__VA_ARGS__);  \
@@ -25,7 +34,6 @@ int __aban_os_exit();
 #define SDL_MAIN_HANDLED
 #include "SDL.h"
 #endif // ABAN_SDL2
-
 
 #ifdef _WIN32
 #define Main(proc)                                                                               \

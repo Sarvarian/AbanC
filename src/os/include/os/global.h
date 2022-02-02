@@ -2,23 +2,24 @@
 
 #include "SDL_stdinc.h"
 
+#ifndef __cplusplus
+#define bool SDL_bool
+#define true SDL_TRUE
+#define false SDL_FALSE
+#endif // !__cplusplus
+
 #define null NULL
 
-#define i8  int8_t
+#define i8 int8_t
 #define i16 int16_t
 #define i32 int32_t
 #define i64 int64_t
-#define u8  uint8_t
+#define u8 uint8_t
 #define u16 uint16_t
 #define u32 uint32_t
 #define u64 uint64_t
 #define f32 float
 #define f64 double
 
-#define bool SDL_bool
-#define true SDL_TRUE
-#define false SDL_FALSE
-
 #define ABAN_INIT_SUCCESS 0
 #define ABAN_INIT_FAILED 1
-
