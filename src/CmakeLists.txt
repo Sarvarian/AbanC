@@ -10,4 +10,5 @@ target_link_libraries(AbanWin32 PUBLIC OS)
 target_link_libraries(AbanSDLConsole PUBLIC OS)
 target_link_libraries(AbanSDLWin32 PUBLIC OS)
 
-target_link_libraries(OS PRIVATE SDL2)
+target_link_libraries(OS PUBLIC SDL2 SDL2main)
+target_include_directories(OS PUBLIC "${SDL_DIR}/include")

@@ -21,6 +21,12 @@ int __aban_os_exit();
   return 0;                               \
  }
 
+#ifdef AbanSDL
+#define SDL_MAIN_HANDLED
+#include "SDL.h"
+#endif // ABAN_SDL2
+
+
 #ifdef _WIN32
 #define Main(proc)                                                                               \
  int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow) \

@@ -1,3 +1,4 @@
+#define AbanSDL
 #include "os/main.h"
 #include "os/window.h"
 
@@ -8,5 +9,5 @@ Main(thread_main);
 
 inline void thread_main()
 {
- create_window();
+ //create_window();
 }
