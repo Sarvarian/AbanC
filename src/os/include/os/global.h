@@ -8,7 +8,11 @@
 #define false SDL_FALSE
 #endif // !__cplusplus
 
+#ifdef __cplusplus
+#define null nullptr
+#else
 #define null NULL
+#endif // __cplusplus
 
 #define i8 int8_t
 #define i16 int16_t

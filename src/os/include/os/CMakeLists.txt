@@ -2,6 +2,6 @@ target_sources(OS
 PRIVATE
 "global.h"
 "main.h"
-"win32.h"
+"os.h"
 "window.h"
 )

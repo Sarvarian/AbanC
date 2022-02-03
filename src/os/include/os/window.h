@@ -1,19 +1,28 @@
 #pragma once
 #include "os/global.h"
 
-struct AbanOSWindowRequestResult
+#ifdef __cplusplus
+extern "C"
 {
- char is_succeed;
-};
+#endif // __cplusplus
 
-struct AbanOSWindowRequest
-{
- int x;
- int y;
- int w;
- int h;
- char *title;
- void (*callback)();
-};
+ struct AbanOSWindowRequestResult
+ {
+  char is_succeed;
+ };
 
-//void Request
+ struct AbanOSWindowRequest
+ {
+  int x;
+  int y;
+  int w;
+  int h;
+  char *title;
+  void (*callback)();
+ };
+
+ // void Request
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
