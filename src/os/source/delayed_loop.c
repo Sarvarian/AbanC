@@ -13,11 +13,6 @@ LoopDelay aban_os_loop_delay_create(u32 run_per_second)
  return loop_delay;
 }
 
-void aban_os_loop_delay_begin_run(LoopDelay *loop_delay)
-{
- loop_delay->ticks = SDL_GetTicks();
-}
-
 void aban_os_loop_delay_delay(LoopDelay *loop_delay)
 {
  const u32 now = SDL_GetTicks();
@@ -26,5 +21,6 @@ void aban_os_loop_delay_delay(LoopDelay *loop_delay)
  if (diff < loop_delay->frequency)
  {
   SDL_Delay(loop_delay->frequency - diff);
+  loop_delay->ticks = SDL_GetTicks();
  }
 }
