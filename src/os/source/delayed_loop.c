@@ -6,9 +6,7 @@
 LoopDelay aban_os_loop_delay_create(u32 run_per_second)
 {
  const u32 frequency = MILISECONDS_IN_SECOND / run_per_second;
- const LoopDelay loop_delay = {
-     .frequency = frequency,
-     .ticks = SDL_GetTicks()};
+ const LoopDelay loop_delay = {frequency, SDL_GetTicks()};
  return loop_delay;
 }
 
