@@ -26,7 +26,7 @@ extern "C"
   }                                                \
   else                                             \
   {                                                \
-   proc();                                         \
+   proc;                                           \
    __aban_os_exit();                               \
    return 0;                                       \
   }                                                \

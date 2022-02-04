@@ -26,3 +26,7 @@ int __aban_os_exit()
  SDL_Quit();
  return aban_os_exit_code;
 }
+
+void aban_os_process()
+{
+}

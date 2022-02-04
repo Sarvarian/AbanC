@@ -1,7 +1,8 @@
 target_sources(OS
 PRIVATE
-"global.h"
-"main.h"
 "os.h"
+"main.h"
+"global.h"
 "window.h"
+"delayed_loop.h"
 )

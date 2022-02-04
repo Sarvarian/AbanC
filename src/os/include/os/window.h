@@ -8,10 +8,10 @@ extern "C"
 
  struct AbanOSWindowRequestResult
  {
-  char is_succeed;
+  bool is_succeed;
  };
 
- struct AbanOSWindowRequest
+ typedef struct AbanOSWindowRequest
  {
   int x;
   int y;
@@ -19,7 +19,7 @@ extern "C"
   int h;
   char *title;
   void (*callback)();
- };
+ } AbanOSWindowRequest;
 
  // void Request
 
