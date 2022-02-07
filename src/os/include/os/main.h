@@ -1,7 +1,8 @@
 #pragma once
 
-#include "global.h"
+#include "stdlib.h"
 #include "SDL.h"
+#include "global.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -28,6 +29,6 @@ extern "C"
   {                                                \
    proc;                                           \
    __aban_os_exit();                               \
-   return 0;                                       \
+   return EXIT_SUCCESS;                            \
   }                                                \
  }

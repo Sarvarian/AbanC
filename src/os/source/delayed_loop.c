@@ -3,14 +3,14 @@
 
 #define MILISECONDS_IN_SECOND 1000
 
-LoopDelay aban_os_loop_delay_create(u32 run_per_second)
+AbanOSLoopDelay aban_os_loop_delay_create(u32 run_per_second)
 {
  const u32 frequency = MILISECONDS_IN_SECOND / run_per_second;
- const LoopDelay loop_delay = {frequency, SDL_GetTicks()};
+ const AbanOSLoopDelay loop_delay = {frequency, SDL_GetTicks()};
  return loop_delay;
 }
 
-void aban_os_loop_delay_delay(LoopDelay *loop_delay)
+void aban_os_loop_delay_delay(AbanOSLoopDelay *loop_delay)
 {
  const u32 now = SDL_GetTicks();
  const u32 diff = now - loop_delay->ticks;

@@ -6,22 +6,22 @@ extern "C"
 {
 #endif // __cplusplus
 
- struct AbanOSWindowRequestResult
+ typedef struct AbanOSRequestWindowResult
  {
   bool is_succeed;
- };
+ } AbanOSRequestWindowResult;
 
- typedef struct AbanOSWindowRequest
+ typedef struct AbanOSRequestWindow
  {
   int x;
   int y;
   int w;
   int h;
   char *title;
-  void (*callback)();
- } AbanOSWindowRequest;
+  void (*callback)(AbanOSRequestWindowResult *);
+ } AbanOSRequestWindow;
 
- // void Request
+ bool aban_os_request_new_window(AbanOSRequestWindow request);
 
 #ifdef __cplusplus
 }
